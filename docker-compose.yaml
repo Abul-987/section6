@@ -9,7 +9,9 @@ services:
     ports:
       - 3001:3001
     environment: 
-      DB_URL: mongodb://db/vidly  
+      DB_URL: mongodb://db/vidly 
+    volumes:
+      - ./backend:/app
   db: 
     image: mongo:4.0.28-xenial
     ports:
